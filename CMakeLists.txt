@@ -6,11 +6,18 @@ project(db)
 
 # 设置
 set(CMAKE_CXX_STANDARD 11)
+set(TEST "test" CACHE STRING "Some user-specified options")
+add_subdirectory(src)
 
-# 查找当前目录下的所有源文件
-# 并将名称保存到 DIR_SRCS 变量
-aux_source_directory(. DIR_SRCS)
+# Locate GTest
+find_package(GTest REQUIRED)
+include_directories(${GTEST_INCLUDE_DIRS})
 
-
-# Generate target goal
-add_executable(db ${DIR_SRCS})
+if("${TEST}" STREQUAL "db")
+    add_executable(db main.c)
+    target_link_libraries(db TableFunctions)
+else()
+    # Link runTests with what we want to test and tSSSShe GTest and pthread library
+    add_executable(runTests test.cpp)
+    target_link_libraries(runTests TableFunctions ${GTEST_LIBRARIES} pthread)
+endif()

@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mathidot/DataBase/src/defs.h
+stdio.h
+-
+stdbool.h
+-
+stdlib.h
+-
+memory.h
+-
+stdint.h
+-
+types.h
+/home/mathidot/DataBase/src/types.h
+
+/home/mathidot/DataBase/src/types.h
+stdio.h
+-
+stdbool.h
+-
+stdlib.h
+-
+memory.h
+-
+stdint.h
+-
+
+/home/mathidot/DataBase/test.cpp
+gtest/gtest.h
+-
+src/defs.h
+/home/mathidot/DataBase/src/defs.h
+

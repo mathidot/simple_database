@@ -1,0 +1,2 @@
+/usr/bin/ar qc libTableFunctions.a  CMakeFiles/TableFunctions.dir/buffer.c.o CMakeFiles/TableFunctions.dir/table.c.o CMakeFiles/TableFunctions.dir/types.c.o
+/usr/bin/ranlib libTableFunctions.a
