@@ -44,16 +44,16 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mathidot/DataBase
+CMAKE_SOURCE_DIR = /home/os/DataBase
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mathidot/DataBase/build
+CMAKE_BINARY_DIR = /home/os/DataBase/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/runTests.dir/all
+all: CMakeFiles/db.dir/all
 all: src/all
 
 .PHONY : all
@@ -64,7 +64,7 @@ preinstall: src/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/runTests.dir/clean
+clean: CMakeFiles/db.dir/clean
 clean: src/clean
 
 .PHONY : clean
@@ -88,31 +88,31 @@ src/clean: src/CMakeFiles/TableFunctions.dir/clean
 .PHONY : src/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/runTests.dir
+# Target rules for target CMakeFiles/db.dir
 
 # All Build rule for target.
-CMakeFiles/runTests.dir/all: src/CMakeFiles/TableFunctions.dir/all
-	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/depend
-	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mathidot/DataBase/build/CMakeFiles --progress-num=5,6 "Built target runTests"
-.PHONY : CMakeFiles/runTests.dir/all
+CMakeFiles/db.dir/all: src/CMakeFiles/TableFunctions.dir/all
+	$(MAKE) -f CMakeFiles/db.dir/build.make CMakeFiles/db.dir/depend
+	$(MAKE) -f CMakeFiles/db.dir/build.make CMakeFiles/db.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/os/DataBase/build/CMakeFiles --progress-num=5,6 "Built target db"
+.PHONY : CMakeFiles/db.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/runTests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mathidot/DataBase/build/CMakeFiles 6
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/runTests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mathidot/DataBase/build/CMakeFiles 0
-.PHONY : CMakeFiles/runTests.dir/rule
+CMakeFiles/db.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/os/DataBase/build/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/db.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/os/DataBase/build/CMakeFiles 0
+.PHONY : CMakeFiles/db.dir/rule
 
 # Convenience name for target.
-runTests: CMakeFiles/runTests.dir/rule
+db: CMakeFiles/db.dir/rule
 
-.PHONY : runTests
+.PHONY : db
 
 # clean rule for target.
-CMakeFiles/runTests.dir/clean:
-	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/clean
-.PHONY : CMakeFiles/runTests.dir/clean
+CMakeFiles/db.dir/clean:
+	$(MAKE) -f CMakeFiles/db.dir/build.make CMakeFiles/db.dir/clean
+.PHONY : CMakeFiles/db.dir/clean
 
 #=============================================================================
 # Target rules for target src/CMakeFiles/TableFunctions.dir
@@ -121,14 +121,14 @@ CMakeFiles/runTests.dir/clean:
 src/CMakeFiles/TableFunctions.dir/all:
 	$(MAKE) -f src/CMakeFiles/TableFunctions.dir/build.make src/CMakeFiles/TableFunctions.dir/depend
 	$(MAKE) -f src/CMakeFiles/TableFunctions.dir/build.make src/CMakeFiles/TableFunctions.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mathidot/DataBase/build/CMakeFiles --progress-num=1,2,3,4 "Built target TableFunctions"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/os/DataBase/build/CMakeFiles --progress-num=1,2,3,4 "Built target TableFunctions"
 .PHONY : src/CMakeFiles/TableFunctions.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/TableFunctions.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mathidot/DataBase/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/os/DataBase/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/TableFunctions.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mathidot/DataBase/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/os/DataBase/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/TableFunctions.dir/rule
 
 # Convenience name for target.

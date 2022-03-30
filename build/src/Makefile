@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mathidot/DataBase
+CMAKE_SOURCE_DIR = /home/os/DataBase
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mathidot/DataBase/build
+CMAKE_BINARY_DIR = /home/os/DataBase/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/mathidot/DataBase/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/mathidot/DataBase/build/CMakeFiles /home/mathidot/DataBase/build/src/CMakeFiles/progress.marks
-	cd /home/mathidot/DataBase/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mathidot/DataBase/build/CMakeFiles 0
+	cd /home/os/DataBase/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/os/DataBase/build/CMakeFiles /home/os/DataBase/build/src/CMakeFiles/progress.marks
+	cd /home/os/DataBase/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/os/DataBase/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/mathidot/DataBase/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /home/os/DataBase/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/mathidot/DataBase/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/os/DataBase/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/mathidot/DataBase/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/os/DataBase/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/mathidot/DataBase/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/os/DataBase/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/TableFunctions.dir/rule:
-	cd /home/mathidot/DataBase/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/TableFunctions.dir/rule
+	cd /home/os/DataBase/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/TableFunctions.dir/rule
 .PHONY : src/CMakeFiles/TableFunctions.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ TableFunctions: src/CMakeFiles/TableFunctions.dir/rule
 
 # fast build rule for target.
 TableFunctions/fast:
-	cd /home/mathidot/DataBase/build && $(MAKE) -f src/CMakeFiles/TableFunctions.dir/build.make src/CMakeFiles/TableFunctions.dir/build
+	cd /home/os/DataBase/build && $(MAKE) -f src/CMakeFiles/TableFunctions.dir/build.make src/CMakeFiles/TableFunctions.dir/build
 .PHONY : TableFunctions/fast
 
 buffer.o: buffer.c.o
@@ -131,7 +131,7 @@ buffer.o: buffer.c.o
 
 # target to build an object file
 buffer.c.o:
-	cd /home/mathidot/DataBase/build && $(MAKE) -f src/CMakeFiles/TableFunctions.dir/build.make src/CMakeFiles/TableFunctions.dir/buffer.c.o
+	cd /home/os/DataBase/build && $(MAKE) -f src/CMakeFiles/TableFunctions.dir/build.make src/CMakeFiles/TableFunctions.dir/buffer.c.o
 .PHONY : buffer.c.o
 
 buffer.i: buffer.c.i
@@ -140,7 +140,7 @@ buffer.i: buffer.c.i
 
 # target to preprocess a source file
 buffer.c.i:
-	cd /home/mathidot/DataBase/build && $(MAKE) -f src/CMakeFiles/TableFunctions.dir/build.make src/CMakeFiles/TableFunctions.dir/buffer.c.i
+	cd /home/os/DataBase/build && $(MAKE) -f src/CMakeFiles/TableFunctions.dir/build.make src/CMakeFiles/TableFunctions.dir/buffer.c.i
 .PHONY : buffer.c.i
 
 buffer.s: buffer.c.s
@@ -149,7 +149,7 @@ buffer.s: buffer.c.s
 
 # target to generate assembly for a file
 buffer.c.s:
-	cd /home/mathidot/DataBase/build && $(MAKE) -f src/CMakeFiles/TableFunctions.dir/build.make src/CMakeFiles/TableFunctions.dir/buffer.c.s
+	cd /home/os/DataBase/build && $(MAKE) -f src/CMakeFiles/TableFunctions.dir/build.make src/CMakeFiles/TableFunctions.dir/buffer.c.s
 .PHONY : buffer.c.s
 
 table.o: table.c.o
@@ -158,7 +158,7 @@ table.o: table.c.o
 
 # target to build an object file
 table.c.o:
-	cd /home/mathidot/DataBase/build && $(MAKE) -f src/CMakeFiles/TableFunctions.dir/build.make src/CMakeFiles/TableFunctions.dir/table.c.o
+	cd /home/os/DataBase/build && $(MAKE) -f src/CMakeFiles/TableFunctions.dir/build.make src/CMakeFiles/TableFunctions.dir/table.c.o
 .PHONY : table.c.o
 
 table.i: table.c.i
@@ -167,7 +167,7 @@ table.i: table.c.i
 
 # target to preprocess a source file
 table.c.i:
-	cd /home/mathidot/DataBase/build && $(MAKE) -f src/CMakeFiles/TableFunctions.dir/build.make src/CMakeFiles/TableFunctions.dir/table.c.i
+	cd /home/os/DataBase/build && $(MAKE) -f src/CMakeFiles/TableFunctions.dir/build.make src/CMakeFiles/TableFunctions.dir/table.c.i
 .PHONY : table.c.i
 
 table.s: table.c.s
@@ -176,7 +176,7 @@ table.s: table.c.s
 
 # target to generate assembly for a file
 table.c.s:
-	cd /home/mathidot/DataBase/build && $(MAKE) -f src/CMakeFiles/TableFunctions.dir/build.make src/CMakeFiles/TableFunctions.dir/table.c.s
+	cd /home/os/DataBase/build && $(MAKE) -f src/CMakeFiles/TableFunctions.dir/build.make src/CMakeFiles/TableFunctions.dir/table.c.s
 .PHONY : table.c.s
 
 types.o: types.c.o
@@ -185,7 +185,7 @@ types.o: types.c.o
 
 # target to build an object file
 types.c.o:
-	cd /home/mathidot/DataBase/build && $(MAKE) -f src/CMakeFiles/TableFunctions.dir/build.make src/CMakeFiles/TableFunctions.dir/types.c.o
+	cd /home/os/DataBase/build && $(MAKE) -f src/CMakeFiles/TableFunctions.dir/build.make src/CMakeFiles/TableFunctions.dir/types.c.o
 .PHONY : types.c.o
 
 types.i: types.c.i
@@ -194,7 +194,7 @@ types.i: types.c.i
 
 # target to preprocess a source file
 types.c.i:
-	cd /home/mathidot/DataBase/build && $(MAKE) -f src/CMakeFiles/TableFunctions.dir/build.make src/CMakeFiles/TableFunctions.dir/types.c.i
+	cd /home/os/DataBase/build && $(MAKE) -f src/CMakeFiles/TableFunctions.dir/build.make src/CMakeFiles/TableFunctions.dir/types.c.i
 .PHONY : types.c.i
 
 types.s: types.c.s
@@ -203,7 +203,7 @@ types.s: types.c.s
 
 # target to generate assembly for a file
 types.c.s:
-	cd /home/mathidot/DataBase/build && $(MAKE) -f src/CMakeFiles/TableFunctions.dir/build.make src/CMakeFiles/TableFunctions.dir/types.c.s
+	cd /home/os/DataBase/build && $(MAKE) -f src/CMakeFiles/TableFunctions.dir/build.make src/CMakeFiles/TableFunctions.dir/types.c.s
 .PHONY : types.c.s
 
 # Help Target
@@ -235,6 +235,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/mathidot/DataBase/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/os/DataBase/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

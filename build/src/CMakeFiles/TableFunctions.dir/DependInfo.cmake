@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/mathidot/DataBase/src/buffer.c" "/home/mathidot/DataBase/build/src/CMakeFiles/TableFunctions.dir/buffer.c.o"
-  "/home/mathidot/DataBase/src/table.c" "/home/mathidot/DataBase/build/src/CMakeFiles/TableFunctions.dir/table.c.o"
-  "/home/mathidot/DataBase/src/types.c" "/home/mathidot/DataBase/build/src/CMakeFiles/TableFunctions.dir/types.c.o"
+  "/home/os/DataBase/src/buffer.c" "/home/os/DataBase/build/src/CMakeFiles/TableFunctions.dir/buffer.c.o"
+  "/home/os/DataBase/src/table.c" "/home/os/DataBase/build/src/CMakeFiles/TableFunctions.dir/table.c.o"
+  "/home/os/DataBase/src/types.c" "/home/os/DataBase/build/src/CMakeFiles/TableFunctions.dir/types.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

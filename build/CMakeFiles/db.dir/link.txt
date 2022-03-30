@@ -1,0 +1,1 @@
+/usr/bin/gcc -g   CMakeFiles/db.dir/main.c.o  -o db  src/libTableFunctions.a 

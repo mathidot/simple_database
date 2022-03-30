@@ -21,8 +21,16 @@ int main(int argc,char *argv[])
 
         Statement statement;
         switch(prepare_statement(input_buffer,&statement)){
+            default:
+                break;
             case PREPARE_SUCCESS:
                 break;
+            case PREPARE_STRING_TOO_LONG:
+                printf("String is too long.\n");
+                continue;
+            case PREPARE_NEGATIVE_ID:
+                printf("ID must be positive.\n");
+                continue;
             case PREPARE_UNRECONGNIZED_STATEMENT:
                 printf("Unrecongnized statement:%s\n",input_buffer->buffer);
                 continue;

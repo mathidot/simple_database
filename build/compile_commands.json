@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/os/DataBase/build",
+  "command": "/usr/bin/gcc   -g   -o CMakeFiles/db.dir/main.c.o   -c /home/os/DataBase/main.c",
+  "file": "/home/os/DataBase/main.c"
+},
+{
+  "directory": "/home/os/DataBase/build/src",
+  "command": "/usr/bin/gcc   -g   -o CMakeFiles/TableFunctions.dir/buffer.c.o   -c /home/os/DataBase/src/buffer.c",
+  "file": "/home/os/DataBase/src/buffer.c"
+},
+{
+  "directory": "/home/os/DataBase/build/src",
+  "command": "/usr/bin/gcc   -g   -o CMakeFiles/TableFunctions.dir/table.c.o   -c /home/os/DataBase/src/table.c",
+  "file": "/home/os/DataBase/src/table.c"
+},
+{
+  "directory": "/home/os/DataBase/build/src",
+  "command": "/usr/bin/gcc   -g   -o CMakeFiles/TableFunctions.dir/types.c.o   -c /home/os/DataBase/src/types.c",
+  "file": "/home/os/DataBase/src/types.c"
+}
+]

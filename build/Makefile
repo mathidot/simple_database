@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mathidot/DataBase
+CMAKE_SOURCE_DIR = /home/os/DataBase
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mathidot/DataBase/build
+CMAKE_BINARY_DIR = /home/os/DataBase/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mathidot/DataBase/build/CMakeFiles /home/mathidot/DataBase/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/os/DataBase/build/CMakeFiles /home/os/DataBase/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mathidot/DataBase/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/os/DataBase/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named runTests
+# Target rules for targets named db
 
 # Build rule for target.
-runTests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 runTests
-.PHONY : runTests
+db: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 db
+.PHONY : db
 
 # fast build rule for target.
-runTests/fast:
-	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/build
-.PHONY : runTests/fast
+db/fast:
+	$(MAKE) -f CMakeFiles/db.dir/build.make CMakeFiles/db.dir/build
+.PHONY : db/fast
 
 #=============================================================================
 # Target rules for targets named TableFunctions
@@ -136,32 +136,32 @@ TableFunctions/fast:
 	$(MAKE) -f src/CMakeFiles/TableFunctions.dir/build.make src/CMakeFiles/TableFunctions.dir/build
 .PHONY : TableFunctions/fast
 
-test.o: test.cpp.o
+main.o: main.c.o
 
-.PHONY : test.o
+.PHONY : main.o
 
 # target to build an object file
-test.cpp.o:
-	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/test.cpp.o
-.PHONY : test.cpp.o
+main.c.o:
+	$(MAKE) -f CMakeFiles/db.dir/build.make CMakeFiles/db.dir/main.c.o
+.PHONY : main.c.o
 
-test.i: test.cpp.i
+main.i: main.c.i
 
-.PHONY : test.i
+.PHONY : main.i
 
 # target to preprocess a source file
-test.cpp.i:
-	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/test.cpp.i
-.PHONY : test.cpp.i
+main.c.i:
+	$(MAKE) -f CMakeFiles/db.dir/build.make CMakeFiles/db.dir/main.c.i
+.PHONY : main.c.i
 
-test.s: test.cpp.s
+main.s: main.c.s
 
-.PHONY : test.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-test.cpp.s:
-	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/test.cpp.s
-.PHONY : test.cpp.s
+main.c.s:
+	$(MAKE) -f CMakeFiles/db.dir/build.make CMakeFiles/db.dir/main.c.s
+.PHONY : main.c.s
 
 # Help Target
 help:
@@ -171,11 +171,11 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... runTests"
+	@echo "... db"
 	@echo "... TableFunctions"
-	@echo "... test.o"
-	@echo "... test.i"
-	@echo "... test.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

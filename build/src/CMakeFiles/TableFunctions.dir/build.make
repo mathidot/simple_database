@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mathidot/DataBase
+CMAKE_SOURCE_DIR = /home/os/DataBase
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mathidot/DataBase/build
+CMAKE_BINARY_DIR = /home/os/DataBase/build
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/TableFunctions.dir/depend.make
@@ -59,42 +59,42 @@ include src/CMakeFiles/TableFunctions.dir/flags.make
 
 src/CMakeFiles/TableFunctions.dir/buffer.c.o: src/CMakeFiles/TableFunctions.dir/flags.make
 src/CMakeFiles/TableFunctions.dir/buffer.c.o: ../src/buffer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mathidot/DataBase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/CMakeFiles/TableFunctions.dir/buffer.c.o"
-	cd /home/mathidot/DataBase/build/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/TableFunctions.dir/buffer.c.o   -c /home/mathidot/DataBase/src/buffer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/os/DataBase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/CMakeFiles/TableFunctions.dir/buffer.c.o"
+	cd /home/os/DataBase/build/src && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/TableFunctions.dir/buffer.c.o   -c /home/os/DataBase/src/buffer.c
 
 src/CMakeFiles/TableFunctions.dir/buffer.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TableFunctions.dir/buffer.c.i"
-	cd /home/mathidot/DataBase/build/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mathidot/DataBase/src/buffer.c > CMakeFiles/TableFunctions.dir/buffer.c.i
+	cd /home/os/DataBase/build/src && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/os/DataBase/src/buffer.c > CMakeFiles/TableFunctions.dir/buffer.c.i
 
 src/CMakeFiles/TableFunctions.dir/buffer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TableFunctions.dir/buffer.c.s"
-	cd /home/mathidot/DataBase/build/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mathidot/DataBase/src/buffer.c -o CMakeFiles/TableFunctions.dir/buffer.c.s
+	cd /home/os/DataBase/build/src && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/os/DataBase/src/buffer.c -o CMakeFiles/TableFunctions.dir/buffer.c.s
 
 src/CMakeFiles/TableFunctions.dir/table.c.o: src/CMakeFiles/TableFunctions.dir/flags.make
 src/CMakeFiles/TableFunctions.dir/table.c.o: ../src/table.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mathidot/DataBase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/CMakeFiles/TableFunctions.dir/table.c.o"
-	cd /home/mathidot/DataBase/build/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/TableFunctions.dir/table.c.o   -c /home/mathidot/DataBase/src/table.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/os/DataBase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/CMakeFiles/TableFunctions.dir/table.c.o"
+	cd /home/os/DataBase/build/src && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/TableFunctions.dir/table.c.o   -c /home/os/DataBase/src/table.c
 
 src/CMakeFiles/TableFunctions.dir/table.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TableFunctions.dir/table.c.i"
-	cd /home/mathidot/DataBase/build/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mathidot/DataBase/src/table.c > CMakeFiles/TableFunctions.dir/table.c.i
+	cd /home/os/DataBase/build/src && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/os/DataBase/src/table.c > CMakeFiles/TableFunctions.dir/table.c.i
 
 src/CMakeFiles/TableFunctions.dir/table.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TableFunctions.dir/table.c.s"
-	cd /home/mathidot/DataBase/build/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mathidot/DataBase/src/table.c -o CMakeFiles/TableFunctions.dir/table.c.s
+	cd /home/os/DataBase/build/src && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/os/DataBase/src/table.c -o CMakeFiles/TableFunctions.dir/table.c.s
 
 src/CMakeFiles/TableFunctions.dir/types.c.o: src/CMakeFiles/TableFunctions.dir/flags.make
 src/CMakeFiles/TableFunctions.dir/types.c.o: ../src/types.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mathidot/DataBase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/CMakeFiles/TableFunctions.dir/types.c.o"
-	cd /home/mathidot/DataBase/build/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/TableFunctions.dir/types.c.o   -c /home/mathidot/DataBase/src/types.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/os/DataBase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/CMakeFiles/TableFunctions.dir/types.c.o"
+	cd /home/os/DataBase/build/src && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/TableFunctions.dir/types.c.o   -c /home/os/DataBase/src/types.c
 
 src/CMakeFiles/TableFunctions.dir/types.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TableFunctions.dir/types.c.i"
-	cd /home/mathidot/DataBase/build/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mathidot/DataBase/src/types.c > CMakeFiles/TableFunctions.dir/types.c.i
+	cd /home/os/DataBase/build/src && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/os/DataBase/src/types.c > CMakeFiles/TableFunctions.dir/types.c.i
 
 src/CMakeFiles/TableFunctions.dir/types.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TableFunctions.dir/types.c.s"
-	cd /home/mathidot/DataBase/build/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mathidot/DataBase/src/types.c -o CMakeFiles/TableFunctions.dir/types.c.s
+	cd /home/os/DataBase/build/src && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/os/DataBase/src/types.c -o CMakeFiles/TableFunctions.dir/types.c.s
 
 # Object files for target TableFunctions
 TableFunctions_OBJECTS = \
@@ -110,9 +110,9 @@ src/libTableFunctions.a: src/CMakeFiles/TableFunctions.dir/table.c.o
 src/libTableFunctions.a: src/CMakeFiles/TableFunctions.dir/types.c.o
 src/libTableFunctions.a: src/CMakeFiles/TableFunctions.dir/build.make
 src/libTableFunctions.a: src/CMakeFiles/TableFunctions.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mathidot/DataBase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C static library libTableFunctions.a"
-	cd /home/mathidot/DataBase/build/src && $(CMAKE_COMMAND) -P CMakeFiles/TableFunctions.dir/cmake_clean_target.cmake
-	cd /home/mathidot/DataBase/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TableFunctions.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/os/DataBase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C static library libTableFunctions.a"
+	cd /home/os/DataBase/build/src && $(CMAKE_COMMAND) -P CMakeFiles/TableFunctions.dir/cmake_clean_target.cmake
+	cd /home/os/DataBase/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TableFunctions.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/TableFunctions.dir/build: src/libTableFunctions.a
@@ -120,10 +120,10 @@ src/CMakeFiles/TableFunctions.dir/build: src/libTableFunctions.a
 .PHONY : src/CMakeFiles/TableFunctions.dir/build
 
 src/CMakeFiles/TableFunctions.dir/clean:
-	cd /home/mathidot/DataBase/build/src && $(CMAKE_COMMAND) -P CMakeFiles/TableFunctions.dir/cmake_clean.cmake
+	cd /home/os/DataBase/build/src && $(CMAKE_COMMAND) -P CMakeFiles/TableFunctions.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/TableFunctions.dir/clean
 
 src/CMakeFiles/TableFunctions.dir/depend:
-	cd /home/mathidot/DataBase/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mathidot/DataBase /home/mathidot/DataBase/src /home/mathidot/DataBase/build /home/mathidot/DataBase/build/src /home/mathidot/DataBase/build/src/CMakeFiles/TableFunctions.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/os/DataBase/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/os/DataBase /home/os/DataBase/src /home/os/DataBase/build /home/os/DataBase/build/src /home/os/DataBase/build/src/CMakeFiles/TableFunctions.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/TableFunctions.dir/depend
 

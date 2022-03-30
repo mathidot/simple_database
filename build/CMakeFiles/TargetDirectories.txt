@@ -1,6 +1,6 @@
-/home/mathidot/DataBase/build/CMakeFiles/rebuild_cache.dir
-/home/mathidot/DataBase/build/CMakeFiles/edit_cache.dir
-/home/mathidot/DataBase/build/CMakeFiles/runTests.dir
-/home/mathidot/DataBase/build/src/CMakeFiles/rebuild_cache.dir
-/home/mathidot/DataBase/build/src/CMakeFiles/edit_cache.dir
-/home/mathidot/DataBase/build/src/CMakeFiles/TableFunctions.dir
+/home/os/DataBase/build/CMakeFiles/rebuild_cache.dir
+/home/os/DataBase/build/CMakeFiles/edit_cache.dir
+/home/os/DataBase/build/CMakeFiles/db.dir
+/home/os/DataBase/build/src/CMakeFiles/rebuild_cache.dir
+/home/os/DataBase/build/src/CMakeFiles/edit_cache.dir
+/home/os/DataBase/build/src/CMakeFiles/TableFunctions.dir
