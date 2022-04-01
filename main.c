@@ -2,14 +2,20 @@
 
 int main(int argc,char *argv[])
 {
-    Table* table = new_table();
+    if(argc < 2){
+        printf("Must supply a file name.\n");
+        exit(EXIT_FAILURE);
+    }
+
+    const char* file_name = argv[1];
+    Table* table = db_open(file_name);
     InputBuffer *input_buffer = new_input_buffer();
     while(true){
         print_prompt();
         read_input(input_buffer);
 
         if(input_buffer->buffer[0] == '.'){
-            switch (do_meta_command(input_buffer))
+            switch (do_meta_command(input_buffer,table))
             {
             case META_COMMAND_SUCCESS:
                 continue;

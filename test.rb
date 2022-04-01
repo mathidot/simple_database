@@ -84,4 +84,25 @@ describe 'database' do
       ])
     end
 
+    it 'keeps data after close connection' do
+      result1 = run_script([
+        "insert 1 mathidot c1216440698@126.com",
+        ".exit",
+      ])
+      expect(result1).to match_array([
+        "db > Executed.",
+        "db > ",
+      ])
+
+      result2 = run_script([
+        "select",
+        ".exit",
+      ])
+      expect(result2).to match_array([
+        "db > (1, mathidot, c1216440698@126.com)",
+        "Executed.",
+        "db > ",
+      ])
+
+    end
   end
