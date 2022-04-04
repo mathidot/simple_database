@@ -3,8 +3,8 @@ CC = gcc
 db: main.c
 	$(CC) -g main.c src/buffer.c src/table.c src/types.c -o db
 run:
-	./db
+	./db mydb.db
 test:
 	rspec test.rb
 clean:
-	rm db 
+	rm db *.db
