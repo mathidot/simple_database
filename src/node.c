@@ -1,5 +1,11 @@
 #include "defs.h"
 
+/*
+    node.c define the operations on the B-tree node.
+    The B-tree node can be divided into two catogories:
+    leaf_node, and internal_node.
+*/
+
 void print_constants()
 {
     printf("ROW_SIZE: %d\n", ROW_SIZE);
@@ -10,22 +16,25 @@ void print_constants()
     printf("LEAF_NODE_MAX_CELLS: %d\n", LEAF_NODE_MAX_CELLS);
 }
 
-// Accessing Root Node fields
+// Accessing internal node num_keys fields
 uint32_t *internal_node_num_keys(void *node)
 {
     return node + INTERNAL_NODE_NUM_KEYS_OFFSET;
 }
 
+// Accessing internal node rightmost child field
 uint32_t *internal_node_right_child(void *node)
 {
     return node + INTERNAL_NODE_RIGHT_CHILD_OFFSET;
 }
 
+// Accesing internal_node's specified cell's field
 uint32_t *internal_node_cell(void *node, uint32_t cell_num)
 {
     return node + INTERNAL_NODE_HEADER_SIZE + INTERNAL_NODE_CELL_SIZE * cell_num;
 }
 
+// Accesing internal_node's specified child's field
 uint32_t *internal_node_child(void *node, uint32_t child_num)
 {
     uint32_t num_keys = *internal_node_num_keys(node);
@@ -44,17 +53,20 @@ uint32_t *internal_node_child(void *node, uint32_t child_num)
     }
 }
 
+// Accesing internal_node's specified key's field
 uint32_t *internal_node_key(void *node, uint32_t key_num)
 {
     return (void*)internal_node_cell(node, key_num) + INTERNAL_NODE_CHILD_SIZE;
 }
 
+// Get the current node's sibling node
 uint32_t* leaf_node_next_leaf(void *node)
 {
     return node + LEAF_NODE_NEXT_LEAF_OFFSET;
 }
 
 NodeType get_node_type(void *node);
+// Acceing the max key value in the node
 uint32_t get_node_max_key(void *node)
 {
     switch (get_node_type(node))
@@ -76,15 +88,19 @@ uint32_t *leaf_node_num_cells(void *node)
     return node + LEAF_NODE_NUM_CELLS_OFFSET;
 }
 
+// Accesing leaf_node's specified cell's field
 void *leaf_node_cell(void *node, uint32_t cell_num)
 {
     return node + LEAF_NODE_HEADER_SIZE + cell_num * LEAF_NODE_CELL_SIZE;
 }
 
+// Accesing leaf_node's specified key's field
 uint32_t *leaf_node_key(void *node, uint32_t cell_num)
 {
     return leaf_node_cell(node, cell_num);
 }
+
+// Accesing leaf_node's specified value's field
 void *leaf_node_value(void *node, uint32_t cell_num)
 {
     return leaf_node_cell(node, cell_num) + LEAF_NODE_KEY_SIZE;
@@ -92,6 +108,7 @@ void *leaf_node_value(void *node, uint32_t cell_num)
 
 void set_node_type(void *node, NodeType type);
 void set_node_root(void *node, bool is_root);
+// Initialize the leaf node
 void initialize_leaf_node(void *node)
 {
     set_node_type(node, NODE_LEAF);
@@ -100,6 +117,7 @@ void initialize_leaf_node(void *node)
     *leaf_node_next_leaf(node) = 0; // 0 represents no sibling
 }
 
+// Initialize the internal node
 void initialize_internal_node(void *node)
 {
     set_node_type(node, NODE_INTERNAL);
@@ -108,6 +126,7 @@ void initialize_internal_node(void *node)
 }
 
 void leaf_node_split_and_insert(Cursor *cursor, uint32_t key, Row *value);
+// insert the new value into the leaf_node
 void leaf_node_insert(Cursor *cursor, uint32_t key, Row *value)
 {
     uint32_t page_num = cursor->page_num;
@@ -143,6 +162,8 @@ void indent(uint32_t level)
     }
 }
 
+
+// print information of b-tree
 void print_tree(Pager *pager, uint32_t page_num, uint32_t indentation_level)
 {
     void *node = get_page(pager, page_num);
@@ -249,6 +270,8 @@ uint32_t internal_node_find_child(void *node,uint32_t key)
     return min_index;
 }
 
+
+// Return the position of the key 
 Cursor* internal_node_find(Table *table, uint32_t page_num, uint32_t key)
 {
     void *node = get_page(table->pager, page_num);
@@ -312,6 +335,7 @@ void set_node_root(void *node, bool is_root)
 
 uint32_t* node_parent(void* node) { return node + PARENT_POINTER_OFFSET; }
 
+// Once split the leaf node, we need to update its parent node
 void update_internal_node_key(void* node, uint32_t old_key, uint32_t new_key) {
     uint32_t old_child_index = internal_node_find_child(node, old_key);
     *internal_node_key(node, old_child_index) = new_key;

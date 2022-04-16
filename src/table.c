@@ -1,5 +1,6 @@
 #include "defs.h"
 
+// serialize row data into memory
 void serialize_row(Row *source, void *destination)
 {
     memcpy(destination + ID_OFFSET, &(source->id), ID_SIZE);
@@ -7,6 +8,7 @@ void serialize_row(Row *source, void *destination)
     strncpy(destination + EMAIL_OFFSET, source->email, EMAIL_SIZE);
 }
 
+// deserialize row data into row structure
 void deserialize_row(void *source, Row *destination)
 {
     memcpy(&(destination->id), source + ID_OFFSET, ID_SIZE);
@@ -19,6 +21,7 @@ void print_row(Row *row)
     printf("(%d, %s, %s)\n", row->id, row->username, row->email);
 }
 
+// open a table
 Table *db_open(const char *file_name)
 {
     Pager *pager = pager_open(file_name);
@@ -37,7 +40,7 @@ Table *db_open(const char *file_name)
     return table;
 }
 
-
+// Cloose the table
 void db_close(Table *table)
 {
     Pager *pager = table->pager;
@@ -92,6 +95,8 @@ Cursor *table_find(Table *table, uint32_t key)
     }
 }
 
+
+// Return the position of table start
 Cursor *table_start(Table *table)
 {
     Cursor* cursor = table_find(table,0);

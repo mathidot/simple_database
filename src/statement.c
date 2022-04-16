@@ -1,5 +1,9 @@
 #include "defs.h"
 
+/*
+    Define the table opeations
+*/
+
 MetaCommandResult do_meta_command(InputBuffer *input_buffer, Table *table)
 {
     if (strcmp(input_buffer->buffer, ".exit") == 0)
@@ -31,6 +35,7 @@ MetaCommandResult do_meta_command(InputBuffer *input_buffer, Table *table)
     }
 }
 
+// Parse the insert statement 
 PrepareResult prepare_insert(InputBuffer *input_buffer, Statement *statement)
 {
     statement->type = STATEMENT_INSERT;
@@ -59,6 +64,8 @@ PrepareResult prepare_insert(InputBuffer *input_buffer, Statement *statement)
     return PREPARE_SUCCESS;
 }
 
+
+// Parse statement
 PrepareResult prepare_statement(InputBuffer *input_buffer, Statement *statement)
 {
     if (strncmp(input_buffer->buffer, "insert", 6) == 0)
@@ -78,6 +85,7 @@ PrepareResult prepare_statement(InputBuffer *input_buffer, Statement *statement)
     return PREPARE_UNRECONGNIZED_STATEMENT;
 }
 
+// insert <key> <user_name> <user_email>
 ExecuteResult execute_insert(Statement *statement, Table *table)
 {
     void *node = get_page(table->pager, table->root_page_num);
@@ -101,6 +109,7 @@ ExecuteResult execute_insert(Statement *statement, Table *table)
     return EXECUTE_SUCCESS;
 }
 
+// select
 ExecuteResult execute_select(Statement *statement, Table *table)
 {
     Row row;
@@ -116,11 +125,14 @@ ExecuteResult execute_select(Statement *statement, Table *table)
     return EXECUTE_SUCCESS;
 }
 
+
+// delete <key>
 ExecuteResult execute_delete(Statement *statement, Table *table)
 {
     return EXECUTE_SUCCESS;
 }
 
+// execute statement
 ExecuteResult execute_statement(Statement *statement, Table *table)
 {
     switch (statement->type)

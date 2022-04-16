@@ -1,5 +1,10 @@
 #include "types.h"
 
+/*
+    Layout of leaf_node memory
+    Layout of internal_node memory
+*/
+
 #define size_of_attribute(Struct, Attribute) sizeof(((Struct *)0)->Attribute)
 const uint32_t ID_SIZE = size_of_attribute(Row, id);
 const uint32_t USERNAME_SIZE = size_of_attribute(Row, username);

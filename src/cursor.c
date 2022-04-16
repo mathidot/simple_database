@@ -1,5 +1,11 @@
 #include "defs.h"
 
+/*
+    A cursor object represents a location in the table.
+*/
+
+
+//Access the row the cursor is pointing
 void *cursor_value(Cursor *cursor)
 {
     void *node = get_page(cursor->table->pager, cursor->page_num);
@@ -7,6 +13,7 @@ void *cursor_value(Cursor *cursor)
     return leaf_node_value(node, cursor->cell_num);
 }
 
+//Advance the cursor to the next row
 void cursor_advance(Cursor *cursor)
 {
     uint32_t page_num = cursor->page_num;
@@ -26,3 +33,10 @@ void cursor_advance(Cursor *cursor)
         }
     }
 }
+
+/*
+Later, we also want to 
+    1.delete the row pointed by a cursor
+    2. Modify the row pointed to by a cursor
+    3. Search a table for a given ID, and create a cursor pointing to the row with that ID
+*/

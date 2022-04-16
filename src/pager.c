@@ -1,5 +1,9 @@
 #include "defs.h"
 
+/*
+    In actually, each b-tree node is just one page, and the size of 
+    page is 4096KB.Pgaer is used to managed these allocated pages.
+*/
 void *get_page(Pager *pager, uint32_t page_num)
 {
     if (page_num > TABLE_MAX_PAGES)
@@ -37,7 +41,7 @@ void *get_page(Pager *pager, uint32_t page_num)
     return pager->pages[page_num];
 }
 
-
+// Create a pager to manage these pages.
 Pager *pager_open(const char *file_name)
 {
     Pager *pager = (Pager *)malloc(sizeof(Pager));
@@ -67,6 +71,10 @@ Pager *pager_open(const char *file_name)
     return pager;
 }
 
+/*
+    If the page is not stored on the disk, pager_flush will
+    flush this page into the disk.
+*/
 void pager_flush(Pager *pager, uint32_t page_num)
 {
     if (pager->pages[page_num] == NULL)
